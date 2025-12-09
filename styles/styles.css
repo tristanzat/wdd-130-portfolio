@@ -68,6 +68,13 @@ header {
   margin: 20px auto;
 }
 
+#client-report-section {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid black;
+}
+
 #projects-header {
   background-color: #f7f6f6;
   margin: 0;
