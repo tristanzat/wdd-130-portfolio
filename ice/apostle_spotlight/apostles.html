@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apostles Spotlights</title>
+    <style>
+      body {
+        background-color: #e8eced;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        color: white;
+      }
+      main {
+        background-image: url(images/christus.webp);
+        background-size: 1200px auto;
+        background-position-x: -200px;
+        width: 400px;
+        height: 550px;
+        border: 7px solid black;
+        border-radius: 15px;
+        margin: 0 auto;
+        margin-top: 40px;
+        padding: 10px 200px;
+      }
+      #first_presidency {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0px 15px;
+      }
+      #twelve {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 20px 10px;
+      }
+      .prophet,
+      .counselor,
+      .apostle {
+        margin: auto;
+        border-radius: 50%;
+        border: 6px solid white;
+        overflow: hidden;
+        transition: transform 0.3s;
+      }
+      .prophet {
+        width: 120px;
+        height: 120px;
+      }
+      .counselor {
+        width: 100px;
+        height: 100px;
+      }
+      .apostle {
+        width: 70px;
+        height: 70px;
+      }
+      .apostle img,
+      .counselor img,
+      .prophet img {
+        width: 100%;
+      }
+      .prophet:hover,
+      .counselor:hover,
+      .apostle:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s;
+        border-color: #ffd700;
+      }
+      h2 {
+        margin: 10px 0;
+        font-size: 2em;
+        grid-area: 1 / 1 / 1 / 7;
+        font-weight: normal;
+      }
+      h3 {
+        font-size: 1.3em;
+        font-weight: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h2>First Presidency</h2>
+      <div id="first_presidency">
+        <div class="counselor">
+          <img src="images/eyring.webp" alt="Henry B. Eyring" />
+        </div>
+        <div class="prophet">
+          <img src="images/oaks.webp" alt="Dallin H. Oaks" />
+        </div>
+        <div class="counselor">
+          <img src="images/christofferson.webp" alt="D. Todd Christofferson" />
+        </div>
+      </div>
+      <h3>Quorum of the Twelve Apostles</h3>
+      <div id="twelve">
+        <div class="apostle">
+          <img src="images/holland.webp" alt="Jeffrey R. Holland" />
+        </div>
+        <div class="apostle">
+          <img src="images/uchtdorf.webp" alt="Dieter F. Uchtdorf" />
+        </div>
+        <div class="apostle">
+          <img src="images/bednar.webp" alt="David A. Bednar" />
+        </div>
+        <div class="apostle">
+          <img src="images/cook.webp" alt="Quentin L. Cook" />
+        </div>
+        <div class="apostle">
+          <img src="images/anderson.webp" alt="Neil L. Andersen" />
+        </div>
+        <div class="apostle">
+          <img src="images/rasband.webp" alt="Ronald A. Rasband" />
+        </div>
+        <div class="apostle">
+          <img src="images/stevenson.webp" alt="Gary E. Stevenson" />
+        </div>
+        <div class="apostle">
+          <img src="images/renlund.webp" alt="Dale G. Renlund" />
+        </div>
+        <div class="apostle">
+          <img src="images/gong.webp" alt="Gerrit W. Gong" />
+        </div>
+        <div class="apostle">
+          <img src="images/soares.webp" alt="Ulisses Soares" />
+        </div>
+        <div class="apostle">
+          <img src="images/kearon.webp" alt="Patrick Kearon" />
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

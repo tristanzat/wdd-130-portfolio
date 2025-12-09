@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Favorite Devotionals</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="header-image">
+          <h1>My Favorite<br />Devotionals</h1>
+        </div>
+      </header>
+      <main>
+        <div class="content-box">
+          <!-- Add your devotional content here -->
+          <table id="devotional-table">
+            <tr>
+              <th>Speaker</th>
+              <th>Title</th>
+              <th>Location</th>
+              <th>Year</th>
+            </tr>
+            <tr>
+              <td>Steven J Lund</td>
+              <td>Flashes of Light</td>
+              <td>BYU</td>
+              <td>2022</td>
+            </tr>
+            <tr>
+              <td>Lawrence E Corbridge</td>
+              <td>Stand Forever</td>
+              <td>BYU</td>
+              <td>2019</td>
+            </tr>
+            <tr>
+              <td>Dale G Renlund</td>
+              <td>
+                Stronger and Closer Connection to God Through Multiple Covenants
+              </td>
+              <td>BYU</td>
+              <td>2024</td>
+            </tr>
+          </table>
+          <span id="spacer"></span>
+          <form id="devotional-form">
+            <input type="text" name="speaker" placeholder="Speaker" required />
+            <input type="text" name="title" placeholder="Title" required />
+            <input
+              type="text"
+              name="location"
+              placeholder="Location"
+              required
+            />
+            <input type="text" name="year" placeholder="Year" required />
+            <input type="submit" value="Add Devotional" />
+          </form>
+        </div>
+      </main>
+    </div>
+
+    <script>
+      document
+        .getElementById("devotional-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault(); // Prevent form from submitting normally
+
+          // Get form values
+          const speaker = document.querySelector('input[name="speaker"]').value;
+          const title = document.querySelector('input[name="title"]').value;
+          const location = document.querySelector(
+            'input[name="location"]'
+          ).value;
+          const year = document.querySelector('input[name="year"]').value;
+
+          // Create new row
+          const table = document.getElementById("devotional-table");
+          const newRow = table.insertRow();
+
+          // Add cells with the form data
+          newRow.insertCell(0).textContent = speaker;
+          newRow.insertCell(1).textContent = title;
+          newRow.insertCell(2).textContent = location;
+          newRow.insertCell(3).textContent = year;
+
+          // Clear the form
+          this.reset();
+        });
+    </script>
+  </body>
+</html>

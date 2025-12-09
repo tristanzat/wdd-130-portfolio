@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Metal+Mania&family=Shadows+Into+Light&display=swap");
+
+body {
+  /* AI-generated: Animated spooky background gradient */
+  background: linear-gradient(45deg, #000000, #1a0033, #330000, #000000);
+  background-size: 400% 400%;
+  animation: spookyBackground 8s ease-in-out infinite;
+  color: #e0e0e0;
+  font-family: "Shadows Into Light", cursive;
+}
+
+/* AI-generated: Background animation for spooky moving effect */
+@keyframes spookyBackground {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Metal Mania", cursive;
+  color: #ff6f61;
+  text-align: center;
+  /* AI-generated: Enhanced text shadow for spooky glow effect */
+  text-shadow: 2px 2px 4px #000000, 0 0 10px #ff4500;
+}
+
+/* AI-generated: Pumpkin emoji decorations for headers */
+h2::before {
+  content: "🎃 ";
+}
+
+h2::after {
+  content: " 🎃";
+}
+
+#wrapper {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+  /* AI-generated: Enhanced spooky box shadow and border effects */
+  box-shadow: 0 0 30px rgba(255, 69, 0, 0.3), inset 0 0 20px rgba(0, 0, 0, 0.5);
+  border: 3px solid #ff4500;
+  position: relative;
+}
+
+/* AI-generated: Floating bat decoration */
+#wrapper::before {
+  content: "🦇";
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  font-size: 2em;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* AI-generated: Floating spider decoration */
+#wrapper::after {
+  content: "🕷️";
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  font-size: 2em;
+  animation: float 3s ease-in-out infinite reverse;
+}
+
+/* AI-generated: Floating animation for decorative elements */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+header {
+  padding: 10px 20px;
+  /* AI-generated: Enhanced gradient background with shadow effects */
+  background: linear-gradient(45deg, #5f3000, #8b4513, #5f3000);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+  align-items: center;
+  font-size: 1.2em;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  /* AI-generated: Remove default list styling */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  text-align: center;
+  margin: 0 15px;
+  /* AI-generated: Interactive navigation styling with hover effects */
+  padding: 10px;
+  background: rgba(139, 69, 19, 0.3);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* AI-generated: Halloween-themed hover effects for navigation */
+li:hover {
+  background: rgba(255, 69, 0, 0.5);
+  transform: scale(1.1);
+  text-shadow: 0 0 10px #fff;
+}
+
+main {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    ". header ."
+    ". img ."
+    "section1 section2 section3";
+  gap: 40px;
+  margin-top: 20px;
+}
+
+main h1 {
+  grid-area: header;
+  /* AI-generated: Enhanced Halloween title with larger size and animations */
+  font-size: 3em;
+  animation: glow 2s infinite alternate;
+  animation: wave 5s infinite alternate;
+  margin: 20px 0;
+}
+
+/* AI-generated: Waving animation for spooky title effect */
+@keyframes wave {
+    0% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(5deg);
+    }
+}
+
+/* AI-generated: Enhanced glowing animation with color changes */
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #b9443a, 0 0 10px #b9443a, 0 0 20px #b9443a, 0 0 30px #ff4500;
+    color: #ff6f61;
+  }
+  100% {
+    text-shadow: 0 0 20px #b9443a, 0 0 30px #b9443a, 0 0 40px #b9443a, 0 0 50px #ff4500;
+    color: #ff4500;
+  }
+}
+
+img {
+  grid-area: img;
+  border: 5px solid #ff6f61;
+  /* AI-generated: Enhanced image styling with circular shape and glow */
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255, 69, 0, 0.8);
+  transition: transform 0.3s ease;
+}
+
+/* AI-generated: Interactive image hover effects */
+img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 40px rgba(255, 69, 0, 1);
+}
+
+section {
+  /* AI-generated: Enhanced section styling with gradients and effects */
+  padding: 15px;
+  background: linear-gradient(135deg, #1a1a1a, #2d1a00);
+  border: 2px solid #ff4500;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+/* AI-generated: Diagonal stripe overlay effect for sections */
+section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(255, 69, 0, 0.1) 10px,
+    rgba(255, 69, 0, 0.1) 20px
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* AI-generated: Show stripe overlay on hover */
+section:hover::before {
+  opacity: 1;
+}
+
+/* AI-generated: Enhanced section hover effects with lift and pulsation */
+section:hover {
+  animation: pulsate 2s infinite alternate;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(255, 69, 0, 0.4);
+}
+
+/* AI-generated: Red to yellow pulsating animation for Halloween effect */
+@keyframes pulsate {
+  0% {
+    background: linear-gradient(135deg, rgba(255, 0, 0, 0.3), rgba(139, 0, 0, 0.3));
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5), 0 8px 25px rgba(255, 69, 0, 0.4);
+  }
+  100% {
+    background: linear-gradient(135deg, rgba(255, 255, 0, 0.3), rgba(255, 140, 0, 0.3));
+    box-shadow: 0 0 25px rgba(255, 255, 0, 0.7), 0 8px 25px rgba(255, 69, 0, 0.4);
+  }
+}
+
+section:nth-child(3) {
+  grid-area: section1;
+}
+
+section:nth-child(4) {
+  grid-area: section2;
+}
+
+section:nth-child(5) {
+  grid-area: section3;
+}
+
+footer {
+  text-align: center;
+  /* AI-generated: Enhanced footer styling with gradients and decorations */
+  padding: 15px;
+  margin: 0;
+  margin-top: 30px;
+  background: linear-gradient(45deg, #5f3000, #8b4513, #5f3000);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  font-size: 1.2em;
+  text-shadow: 2px 2px 4px #000000;
+  position: relative;
+}
+
+/* AI-generated: Floating ghost decoration for footer */
+footer::before {
+  content: "👻";
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5em;
+  animation: float 2s ease-in-out infinite;
+}
+
+/* AI-generated: Floating spider web decoration for footer */
+footer::after {
+  content: "🕸️";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5em;
+  animation: float 2s ease-in-out infinite reverse;
+}

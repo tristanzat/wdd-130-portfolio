@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+body {
+  font-family: "Source Sans 3", sans-serif;
+  color: black;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Montserrat, sans-serif;
+  color: black;
+  font-weight: normal;
+  text-align: center;
+  font-size: 2em;
+}
+
+header {
+  background-color: #232323;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 0 50px;
+}
+
+#logo {
+  width: 150px;
+  height: auto;
+}
+
+#hero {
+  display: grid;
+  grid-template: 300px 60px / repeat(10, 100px) 1fr;
+  justify-content: space-evenly;
+  padding: 50px;
+  border-bottom: 1px solid black;
+  padding-bottom: 100px;
+}
+
+#hero-image {
+  width: 300px;
+  height: auto;
+}
+
+#hero-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-column: 1/10;
+}
+
+#hero-button {
+  grid-column: 4/7;
+}
+
+#about-me-image {
+  width: 300px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+#projects-header {
+  background-color: #f7f6f6;
+  margin: 0;
+  padding: 40px 20px;
+}
+
+#projects {
+  display: grid;
+  grid-template: 1fr / 1fr 1fr;
+  background-color: #f7f6f6;
+  padding: 20px;
+}
+
+#projects div {
+  text-align: center;
+  margin: 20px;
+}
+
+#projects img {
+  width: 450px;
+  height: 300px;
+  object-fit: contain;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  color: #ebebeb;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 0 100px 0 0;
+}
+
+nav a {
+  color: #ebebeb;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 30px 20px;
+  text-align: center;
+  display: block;
+  white-space: nowrap;
+  min-width: 80px;
+  width: 80px;
+}
+
+nav span {
+  color: #ebebeb;
+  padding: 0 10px;
+  flex-shrink: 0;
+}
+
+nav a.active {
+  background-color: #044982;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#contact {
+  padding: 75px 0;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+#contact form {
+  display: grid;
+  grid-template: 75px 75px / 150px 150px;
+  gap: 10px 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+#contact input,
+#contact textarea {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 1em;
+  padding: 2px;
+}
+
+#form-name {
+  grid-column: 1 / 2;
+}
+
+#form-email {
+  grid-column: 2 / 3;
+}
+
+#form-message {
+  grid-column: 1 / 3;
+  width: 350px;
+  height: 100px;
+  resize: none;
+  overflow-y: auto;
+}
+
+#form-submit {
+  grid-column: 1 / 3;
+  justify-self: center;
+  padding: 10px 20px;
+  margin-top: 30px;
+}
+
+.about-me {
+  padding: 0 200px;
+  margin: 20px 0;
+  font-size: 1.2em;
+  line-height: 1.6em;
+  text-align: center;
+}
+
+.contact-info {
+  margin: 10px 0;
+  font-size: 1em;
+  text-align: center;
+}
+
+.spacer {
+  padding: 20px 0;
+}
+
+main {
+  flex: 1;
+}
+
+.container {
+  flex: 1;
+}
+
+#ice-projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+#ice-projects section {
+  background-color: #f7f6f6;
+  border-radius: 10px;
+  margin: 2px;
+  padding: 20px;
+}
+
+footer {
+  background-color: #044982;
+  color: #ebebeb;
+  padding: 30px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}

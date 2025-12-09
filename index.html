@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tristan Zatylny | Home</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/site.webmanifest" />
+  </head>
+  <body>
+    <header>
+      <img
+        src="images/personal-logo.png"
+        alt="Tristan Zatylny Logo"
+        id="logo"
+      />
+      <!--Navigation Bar-->
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <span>|</span>
+        <a href="wwr/index.html">WWR</a>
+        <span>|</span>
+        <a href="ice.html">ICE</a>
+        <span>|</span>
+        <a href="aboutme.html">About Me</a>
+      </nav>
+    </header>
+    <main>
+      <!--Hero section-->
+      <section id="hero">
+        <h2 id="hero-header">
+          Welcome to Tristan Zatylny's <br />
+          Home Page
+        </h2>
+        <img
+          id="hero-image"
+          src="images/tristan.jpeg"
+          alt="Picture of Tristan"
+        />
+        <button
+          id="hero-button"
+          onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });"
+        >
+          Get in Touch
+        </button>
+      </section>
+      <!--Featured projects section-->
+      <h2 id="projects-header">Featured Projects</h2>
+      <section id="projects">
+        <div>
+          <img
+            src="images/knowledge-knights.png"
+            alt="Knowledge Knights image"
+          />
+          <h3>Knowledge Knights</h3>
+          <div>
+            <span
+              >Knowledge Knights was developed for BYU-Idaho's i-Hack 2025: Hack
+              the Norm hackathon. View the project's Devpost page
+              <a
+                href="https://devpost.com/software/question-game"
+                target="_blank"
+                >here</a
+              >
+              or view the GitHub repo
+              <a
+                href="https://github.com/yggaraxyg/BYU-I_IHACK_2025"
+                target="_blank"
+                >here</a
+              >. My largest contributions were the menu design and csv handling.</span
+            >
+          </div>
+        </div>
+        <div>
+          <img src="images/project_two.jpg" alt="Project 2 Image" />
+          <h3>Project 2</h3>
+        </div>
+      </section>
+      <!--Send me a message section-->
+      <section id="contact">
+        <h2>Send me a message</h2>
+        <form>
+          <input
+            type="text"
+            id="form-name"
+            name="name"
+            placeholder="Name"
+            required
+          />
+          <input
+            type="email"
+            id="form-email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+          <textarea
+            id="form-message"
+            name="message"
+            placeholder="Your message here"
+            required
+          ></textarea>
+          <button type="submit" id="form-submit">Send Message</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 Tristan Zatylny</p>
+      <!--Nav bar with back to top, home link, about me-->
+      <nav>
+        <a
+          href="#"
+          onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;"
+          >Back to Top</a
+        >
+        <span>|</span>
+        <a href="index.html">Home</a>
+        <span>|</span>
+        <a href="aboutme.html">About Me</a>
+      </nav>
+    </footer>
+  </body>
+</html>

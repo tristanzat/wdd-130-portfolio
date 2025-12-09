@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flag</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Helvetica Neue', sans-serif;
+            background-color: gray;
+        }
+
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            letter-spacing: 0.05rem;
+            text-transform: uppercase;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-weight: 400;
+        }
+        main {
+            display: grid;
+            grid-template-columns: .1fr .1fr 1fr .1fr;
+            margin-top: 20px;
+        }
+        hr {
+            width: 100%;
+            grid-column: 1 / 5;
+        }
+        h2 {
+            grid-column: 2/3;
+        }
+
+        #blue {
+            background: blue;
+            grid-column: 1 / 2;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+        }
+
+        #white {
+            background: white;
+            grid-column: 2 / 4;
+        }
+
+        #red {
+            background: red;
+            grid-column: 1 / 4;
+        }
+
+        #chile {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            height: 200px;
+            width: 300px;
+        }
+
+        .star {
+            width: 70px;
+            aspect-ratio: 1;
+            background: white;
+            clip-path: polygon(50% 0, 79% 90%, 2% 35%, 98% 35%, 21% 90%);
+        }
+
+        #denmark {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            height: 200px;
+            width: 300px;
+            background-color: white;
+        }
+
+        #dred1 {
+            background: red;
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            margin: 0 15px 15px 0;
+        }
+
+        #dred2 {
+            background: red;
+            grid-column: 2 / 4;
+            grid-row: 1 / 2;
+            margin: 0 0 15px 15px;
+        }
+
+        #dred3 {
+            background: red;
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            margin: 15px 15px 0 0;
+        }
+
+        #dred4 {
+            background: red;
+            grid-column: 2 / 4;
+            grid-row: 2 / 3;
+            margin: 15px 0 0 15px;
+        }
+
+        #finland {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            height: 200px;
+            width: 300px;
+            background-color: blue;
+        }
+
+        #fwhite1 {
+            background: white;
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            margin: 0 20px 20px 0;
+        }
+
+        #fwhite2 {
+            background: white;
+            grid-column: 2 / 4;
+            grid-row: 1 / 2;
+            margin: 0 0 20px 20px;
+        }
+
+        #fwhite3 {
+            background: white;
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            margin: 20px 20px 0 0;
+        }
+
+        #fwhite4 {
+            background: white;
+            grid-column: 2 / 4;
+            grid-row: 2 / 3;
+            margin: 20px 0 0 20px;
+        }
+
+        #benin {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: 1fr 1fr;
+            height: 200px;
+            width: 300px;
+        }
+
+        #bgreen {
+            background: green;
+            grid-column: 1 / 3;
+            grid-row: 1 / 3;
+        }
+
+        #byellow {
+            background: yellow;
+            grid-column: 3 / 6;
+            grid-row: 1 / 2;
+        }
+
+        #bred {
+            background: red;
+            grid-column: 3 / 6;
+            grid-row: 2 / 3;
+        }
+
+        #italy {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            height: 200px;
+            width: 300px;
+        }
+
+        #igreen {
+            background: green;
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+        }
+
+        #iwhite {
+            background: white;
+            grid-column: 2 / 3;
+            grid-row: 1 / 3;
+        }
+
+        #ired {
+            background: crimson;
+            grid-column: 3 / 4;
+            grid-row: 1 / 3;
+        }
+
+        #car {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(4, 1fr);
+            height: 200px;
+            width: 300px;
+            background-color: crimson;
+        }
+
+        #carstar {
+            width: 45px;
+            background-color: gold;
+            margin: 4px 0 0 25px;
+        }
+
+        #carnavy1 {
+            background: navy;
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            display: grid;
+            align-items: center;
+            margin: 0 25px 0 0;
+        }
+
+        #carnavy2 {
+            background: navy;
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            margin: 0 0 0 25px;
+        }
+
+        #carwhite1 {
+            background: white;
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            margin: 0 25px 0 0;
+        }
+
+        #carwhite2 {
+            background: white;
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+            margin: 0 0 0 25px;
+        }
+
+        #cargreen1 {
+            background: forestgreen;
+            grid-column: 1 / 2;
+            grid-row: 3 / 5;
+            margin: 0 25px 0 0;
+        }
+
+        #cargreen2 {
+            background: forestgreen;
+            grid-column: 2 / 3;
+            grid-row: 3 / 5;
+            margin: 0 0 0 25px;
+        }
+
+        #caryellow1 {
+            background: gold;
+            grid-column: 1 / 2;
+            grid-row: 4 / 5;
+            margin: 0 25px 0 0;
+        }
+
+        #caryellow2 {
+            background: gold;
+            grid-column: 2 / 3;
+            grid-row: 4 / 5;
+            margin: 0 0 0 25px;
+        }
+
+        #texas {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            height: 200px;
+            width: 300px;
+        }
+
+        #texasblue {
+            background: darkslateblue;
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+        }
+
+        #texaswhite {
+            background: white;
+            grid-column: 2 / 4;
+            grid-row: 1 / 2;
+        }
+
+        #texasred {
+            background: red;
+            grid-column: 2 / 4;
+            grid-row: 2 / 3;
+        }
+
+        #czechia {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-template-rows: 1fr 1fr;
+            height: 200px;
+            width: 300px;
+            position: relative;
+        }
+
+        #czblue {
+            background: darkslateblue;
+            grid-column: 1 / 4;
+            grid-row: 1 / 3;
+            clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+            z-index: 2;
+        }
+
+        #czwhite {
+            background: white;
+            grid-column: 1 / 8;
+            grid-row: 1 / 2;
+            z-index: 1;
+        }
+
+        #czred {
+            background: red;
+            grid-column: 1 / 8;
+            grid-row: 2 / 3;
+            z-index: 1;
+        }
+
+        #liberia {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(11, 1fr);
+            height: 200px;
+            width: 300px;
+            background: linear-gradient(
+                to bottom,
+                crimson,
+                crimson 50%,
+                white 50%,
+                white
+            );
+            background-size: 100% calc(400px/11);
+        }
+
+        #lblue {
+            background: darkslateblue;
+            grid-column: 1 / 3;
+            grid-row: 1 / 6;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Using CSS Grid to make Country Flags</h1>
+    </header>
+    <main>
+        <h2>Chile</h2>
+        <div id="chile">
+            <div id="blue">
+                <div class="star"></div>
+            </div>
+            <div id="white"></div>
+            <div id="red"></div>
+        </div>
+        <hr>
+
+        <h2>Denmark</h2>
+        <div id="denmark">
+            <div id="dred1"></div>
+            <div id="dred2"></div>
+            <div id="dred3"></div>
+            <div id="dred4"></div>
+        </div>
+        <hr>
+
+        <h2>Finland</h2>
+        <div id="finland">
+            <div id="fwhite1"></div>
+            <div id="fwhite2"></div>
+            <div id="fwhite3"></div>
+            <div id="fwhite4"></div>
+        </div>
+        <hr>
+
+        <h2>Benin</h2>
+        <div id="benin">
+            <div id="bgreen"></div>
+            <div id="byellow"></div>
+            <div id="bred"></div>
+        </div>
+        <hr>
+
+        <h2>Italy</h2>
+        <div id="italy">
+            <div id="igreen"></div>
+            <div id="iwhite"></div>
+            <div id="ired"></div>
+        </div>
+        <hr>
+
+        <h2>Central African Republic</h2>
+        <div id="car">
+            <div id="carnavy1">
+                <div id="carstar" class="star"></div>
+            </div>
+            <div id="carnavy2"></div>
+            <div id="carwhite1"></div>
+            <div id="carwhite2"></div>
+            <div id="cargreen1"></div>
+            <div id="cargreen2"></div>
+            <div id="caryellow1"></div>
+            <div id="caryellow2"></div>
+        </div>
+        <hr>
+
+        <h2>Texas</h2>
+        <div id="texas">
+            <div id="texasblue">
+                <div class="star"></div>
+            </div>
+            <div id="texaswhite"></div>
+            <div id="texasred"></div>
+        </div>
+        <hr>
+
+        <h2>Czechia</h2>
+        <div id="czechia">
+            <div id="czblue" class="triangle"></div>
+            <div id="czwhite"></div>
+            <div id="czred"></div>
+        </div>
+        <hr>
+
+        <h2>Liberia</h2>
+        <div id="liberia">
+            <div id="lblue">
+                <div class="star"></div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
