@@ -228,3 +228,28 @@ footer {
   align-items: center;
   margin-top: auto;
 }
+
+#final-report {
+  margin: 0;
+  padding: 20px;
+  border-bottom: 1px solid black;
+}
+
+.container {
+  margin: 0;
+  border-bottom: 1px solid black;
+}
+
+.container:nth-child(even) {
+  background-color: #f7f6f6;
+}
+
+.container h2 {
+  margin: 0;
+  padding: 20px;
+}
+
+.container p {
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+}
